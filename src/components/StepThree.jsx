@@ -7,11 +7,18 @@ import step2 from "../assets/updated/step2.png";
 import { buyRoom } from "../ContractIntegration";
 import axios from "axios";
 
-const StepThree = ({ onNavigate, onBack, totalPrice, tokenID, nftData }) => {
+const StepThree = ({
+  onNavigate,
+  onBack,
+  totalPrice,
+  tokenID,
+  nftData,
+  data,
+}) => {
   const [isLoading, setIsLoading] = useState(false);
   const _tokenId = tokenID;
   const [roomImage, setRoomImage] = useState(null);
-const [bookingData, setBookingData] = useState(null);
+  const [bookingData, setBookingData] = useState(null);
 
   useEffect(() => {
     const fetchBookingData = async () => {
@@ -26,7 +33,7 @@ const [bookingData, setBookingData] = useState(null);
           const tokenID = nftData;
 
           if (data && data.status === true) {
-             setBookingData(data);
+            setBookingData(data);
             // Find the image with mainImage set to true and set roomImage
             const mainImage = data.data.booking.property.images.find(
               (image) => image.mainImage === true
@@ -45,27 +52,27 @@ const [bookingData, setBookingData] = useState(null);
     fetchBookingData();
   }, [nftData]);
 
-    const checkInDate = bookingData?.data?.checkIn
-      ? new Date(bookingData.data.checkIn)
-      : null;
-    const formattedDateCheckIn = checkInDate
-      ? `${checkInDate.getDate().toString().padStart(2, "0")}-${(
-          checkInDate.getMonth() + 1
-        )
-          .toString()
-          .padStart(2, "0")}-${checkInDate.getFullYear()}`
-      : "";
+  const checkInDate = bookingData?.data?.checkIn
+    ? new Date(bookingData.data.checkIn)
+    : null;
+  const formattedDateCheckIn = checkInDate
+    ? `${checkInDate.getDate().toString().padStart(2, "0")}-${(
+        checkInDate.getMonth() + 1
+      )
+        .toString()
+        .padStart(2, "0")}-${checkInDate.getFullYear()}`
+    : "";
 
-    const checkOutDate = bookingData?.data?.checkOut
-      ? new Date(bookingData.data.checkOut)
-      : null;
-    const formattedDateCheckOut = checkOutDate
-      ? checkOutDate.toLocaleDateString("en-GB", {
-          day: "2-digit",
-          month: "long",
-          year: "numeric",
-        })
-      : "";
+  const checkOutDate = bookingData?.data?.checkOut
+    ? new Date(bookingData.data.checkOut)
+    : null;
+  const formattedDateCheckOut = checkOutDate
+    ? checkOutDate.toLocaleDateString("en-GB", {
+        day: "2-digit",
+        month: "long",
+        year: "numeric",
+      })
+    : "";
 
   const handleBuyRoom = async () => {
     setIsLoading(true);
@@ -163,7 +170,7 @@ const [bookingData, setBookingData] = useState(null);
                   "unknown country"}{" "}
                 from <br />
                 {formattedDateCheckIn} to {formattedDateCheckOut} <br /> for
-                USDC {totalPrice} for 2 guests.
+                USDC {totalPrice} for {data.rooms[0].maxAdults} guests.
               </p>
 
               <div className="flex w-full items-center justify-center md:mt-7 sm:mt-5">
