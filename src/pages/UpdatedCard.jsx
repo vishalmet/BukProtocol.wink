@@ -39,7 +39,7 @@ const UpdatedCard = () => {
           onNavigate={(nextPage, data) => handleNavigation(nextPage, data)}
           nftData={nftData}
           setTokenID={setTokenID}
-          tokenID = {tokenID}
+          tokenID={tokenID}
         />
       )}
       {currentPage === "stepone" && (
@@ -68,6 +68,7 @@ const UpdatedCard = () => {
           onBack={() => handleNavigation("steptwo")}
           totalPrice={totalPrice}
           tokenID={tokenID}
+          data={Data}
         />
       )}
       {currentPage === "success" && (
