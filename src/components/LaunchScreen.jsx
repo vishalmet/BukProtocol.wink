@@ -8,7 +8,7 @@ import icon3 from "../assets/updated/icon3.png";
 import hline from "../assets/updated/Line 60.png";
 import vline from "../assets/updated/Line 62.png";
 
-const LaunchScreen = ({ onNavigate, nftData, setTokenID, }) => {
+const LaunchScreen = ({ onNavigate, nftData, setTokenID, tokenID}) => {
   const [bookingData, setBookingData] = useState(null);
   const [roomImage, setRoomImage] = useState(null);
 
@@ -193,9 +193,9 @@ const LaunchScreen = ({ onNavigate, nftData, setTokenID, }) => {
 
             {/* Button */}
             <div className="flex justify-center items-center gap-4 md:mt-6 sm:mt-2">
-              <button className="text-white bg-[#331D19] border border-[#7B3F26] md:px-9 md:py-2 sm:text-xs sm:px-4 sm:py-1 md:text-[16px] rounded-lg ">
+              <a href={`https://polygon.dassets.xyz/hotels/nft-details?nftId=${tokenID}`} target="_blank" rel="noopener noreferrer" className="text-white bg-[#331D19] border border-[#7B3F26] md:px-9 md:py-2 sm:text-xs sm:px-4 sm:py-1 md:text-[16px] rounded-lg ">
                 Hotel Details
-              </button>
+              </a>
               <button
                 className="text-white bg-[#CA3F2A] border border-[#FFE3E3] md:px-9 md:py-2 sm:text-xs sm:px-4 sm:py-1 md:text-[16px] rounded-lg border-opacity-50"
                 onClick={() => onNavigate("stepone", bookingData)}

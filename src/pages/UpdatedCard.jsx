@@ -39,6 +39,7 @@ const UpdatedCard = () => {
           onNavigate={(nextPage, data) => handleNavigation(nextPage, data)}
           nftData={nftData}
           setTokenID={setTokenID}
+          tokenID = {tokenID}
         />
       )}
       {currentPage === "stepone" && (
