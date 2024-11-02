@@ -71,7 +71,7 @@ const LaunchScreen = ({ onNavigate, nftData, setTokenID, tokenID}) => {
     : "";
 
   if (!bookingData) {
-    return <div>Loading...</div>; // Show a loading state if data is not yet fetched
+    return <div className="bg-black text-white text-center justify-center items-center flex h-screen">Loading...</div>; // Show a loading state if data is not yet fetched
   }
 
   return (
@@ -85,7 +85,7 @@ const LaunchScreen = ({ onNavigate, nftData, setTokenID, tokenID}) => {
             backgroundPosition: "center",
           }}
         >
-          <div className="md:ml-[330px] sm:ml-[200px] ml-[150px]">
+          <div className="md:ml-[330px] sm:ml-[180px] ml-[150px]">
             <img
               src={buk}
               alt=""
@@ -145,11 +145,11 @@ const LaunchScreen = ({ onNavigate, nftData, setTokenID, tokenID}) => {
                   <img
                     src={vline}
                     alt=""
-                    className="w-[1.5px] md:h-[73px] h-[50px] ml-2 sm:ml-5 md:mt-1"
+                    className="w-[1.5px] md:h-[73px] h-[50px] ml-2 sm:ml-4 md:mt-1"
                   />
                 </div>
 
-                <div className="flex md:ml-[-35px] sm:ml-[-12px] ml-[-8px]">
+                <div className="flex md:ml-[-35px] ml-[-15px]">
                   <div className="flex-col flex">
                     <img
                       src={icon2}
@@ -167,11 +167,11 @@ const LaunchScreen = ({ onNavigate, nftData, setTokenID, tokenID}) => {
                   <img
                     src={vline}
                     alt=""
-                    className="w-[1.5px] md:h-[73px] sm:h-[50px] ml-3 h-[50px] sm:ml-4 md:mt-1"
+                    className="w-[1.5px] md:h-[73px] sm:h-[50px] ml-[-10px] h-[50px] sm:ml-4 md:mt-1"
                   />
                 </div>
 
-                <div className="flex md:ml-[-50px] sm:ml-[-10px] ml-[3px]">
+                <div className="flex md:ml-[-50px] sm:ml-[-5px] ">
                   <div className="flex-col flex">
                     <img
                       src={icon3}
@@ -193,7 +193,7 @@ const LaunchScreen = ({ onNavigate, nftData, setTokenID, tokenID}) => {
             </div>
 
             {/* Button */}
-            <div className="flex justify-center items-center gap-4 md:mt-6 sm:mt-2 mt-1">
+            <div className="flex justify-center items-center gap-4 md:mt-6  mt-1">
               <a
                 href={`https://polygon.dassets.xyz/hotels/nft-details?nftId=${tokenID}`}
                 target="_blank"

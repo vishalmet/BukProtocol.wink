@@ -141,16 +141,16 @@ const StepOne = ({ bookingData, onNavigate, onBack, setData, nftData }) => {
 
   return (
     <div className="flex justify-center items-center h-screen bg-black">
-      <div className="relative md:w-[500px] md:h-[500px] sm:h-[350px] sm:w-[350px] bg-[#161616] shadow-lg p-2 flex flex-col items-center">
+      <div className="relative md:w-[500px] md:h-[500px] sm:h-[350px] sm:w-[300px] bg-[#161616] shadow-lg p-2 flex flex-col items-center">
         <div
-          className="relative shadow-lg md:w-[485px] md:h-[230px] sm:h-[160px] sm:w-[335px] p-6 flex flex-col justify-between"
+          className="relative shadow-lg md:w-[485px] md:h-[230px] sm:h-[150px] sm:w-[30p0x] p-6 flex flex-col justify-between"
           style={{
             backgroundImage: `url(${roomImage})`,
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}
         >
-          <div className="md:ml-[330px] sm:ml-[200px]">
+          <div className="md:ml-[330px] sm:ml-[170px]">
             <img
               src={buk}
               alt="buk"
@@ -159,7 +159,7 @@ const StepOne = ({ bookingData, onNavigate, onBack, setData, nftData }) => {
           </div>
 
           {/* Content */}
-          <div className="md:mt-48 sm:mt-32">
+          <div className="md:mt-48 sm:mt-28">
             <div className="flex">
               <div className="flex ml-[-15px]">
                 <div className="text-white flex">
@@ -205,7 +205,7 @@ const StepOne = ({ bookingData, onNavigate, onBack, setData, nftData }) => {
             </div>
 
             {/* Form */}
-            <div className="flex flex-col items-center md:mt-10 sm:mt-6">
+            <div className="flex flex-col items-center md:mt-10 sm:mt-2">
               <input
                 type="email"
                 value={email}
@@ -213,7 +213,7 @@ const StepOne = ({ bookingData, onNavigate, onBack, setData, nftData }) => {
                 placeholder="Email address"
                 className="border border-[#373737] bg-[#222222] sm:text-xs md:text-md rounded-md md:p-2 md:py-2 sm:py-1 mb-2 w-[70%] max-w-[400px] focus:outline-none focus:ring-[0.5px] focus:ring-[#FFCACA] text-white text-center"
               />
-              {emailError && <p className="text-red-500">{emailError}</p>}
+              {emailError && <p className="text-red-500  text-xs">{emailError}</p>}
 
               <input
                 type="tel"
@@ -223,9 +223,9 @@ const StepOne = ({ bookingData, onNavigate, onBack, setData, nftData }) => {
                 placeholder="Mobile number"
                 className="border border-[#373737] bg-[#222222] sm:text-xs md:text-md rounded-md md:p-2 md:py-2 sm:py-1 mb-2 w-[70%] max-w-[400px] focus:outline-none focus:ring-[0.5px] focus:ring-[#FFCACA] text-white text-center"
               />
-              {phoneError && <p className="text-red-500">{phoneError}</p>}
+              {phoneError && <p className="text-red-500 text-xs">{phoneError}</p>}
 
-              <div className="flex w-full sm:mt-2 md:mt-2 items-center justify-center">
+              <div className="flex w-full sm:mt-1 md:mt-2 items-center justify-center">
                 <img
                   src={arrow}
                   alt="arrow"

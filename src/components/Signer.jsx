@@ -112,7 +112,7 @@ const WalletConnect = () => {
                 alignItems: "center",
             }}
         >
-            <button className=" mb-2 p-1"
+            <button className=" mb-2 p-1 text-xs"
                 onClick={connectAndSign}
                 disabled={isConnecting}
                 style={{
