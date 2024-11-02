@@ -76,30 +76,30 @@ const LaunchScreen = ({ onNavigate, nftData, setTokenID, tokenID}) => {
 
   return (
     <div className="flex justify-center items-center h-screen bg-black">
-      <div className="relative md:w-[500px] md:h-[500px] sm:h-[350px] sm:w-[350px] bg-[#161616] shadow-lg p-2 flex flex-col items-center">
+      <div className="relative md:w-[500px] md:h-[500px] sm:h-[350px] sm:w-[300px] bg-[#161616] w-full shadow-lg p-2 flex flex-col items-center">
         <div
-          className="relative shadow-lg md:w-[485px] md:h-[230px] sm:h-[160px] sm:w-[335px] p-6 flex flex-col justify-between"
+          className="relative shadow-lg md:w-[485px] md:h-[230px] sm:h-[160px] sm:w-[300px] w-full h-[110px] sm:p-6 p-3 flex flex-col justify-between"
           style={{
             backgroundImage: `url(${roomImage})`, // Use the roomImage state
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}
         >
-          <div className="md:ml-[330px] sm:ml-[200px]">
+          <div className="md:ml-[330px] sm:ml-[200px] ml-[150px]">
             <img
               src={buk}
               alt=""
-              className="md:w-[70px] w-[50px] md:ml-12 sm:ml-[35px]"
+              className="md:w-[70px] w-[50px] md:ml-12 ml-[22px] sm:ml-[35px]"
             />
-            <div className="flex items-center md:mt-[140px] sm:mt-[85px]">
-              <span className="text-white md:text-sm sm:text-xs mr-2">
+            <div className="flex items-center md:mt-[140px] mt-[50px] sm:mt-[85px]">
+              <span className="text-white md:text-sm text-xs mr-2">
                 {bookingData.data.booking.property.stars}
               </span>
               <div className="flex">
                 {[...Array(5)].map((_, index) => (
                   <span
                     key={index}
-                    className={`md:text-lg sm:text-md md:mr-1 ${
+                    className={`md:text-lg text-md md:mr-1 ${
                       index < bookingData.data.booking.property.stars
                         ? "text-red-600"
                         : "text-gray-500"
@@ -113,31 +113,31 @@ const LaunchScreen = ({ onNavigate, nftData, setTokenID, tokenID}) => {
           </div>
 
           {/* Content */}
-          <div className="md:mt-5 sm:mt-3">
-            <ul className="list-disc list-inside text-[#FFC4BB] md:text-xs sm:text-[9px]">
+          <div className="md:mt-5 sm:mt-3 mt-1">
+            <ul className="list-disc list-inside text-[#FFC4BB] md:text-xs text-[9px]">
               <li>
                 <span className="ml-[-6px]">{bookingData.data.bedType}</span>
               </li>
             </ul>
-            <h1 className="text-white md:text-lg sm:text-sm mt-1">
+            <h1 className="text-white md:text-lg sm:text-sm text-xs sm:mt-1">
               {bookingData.data.booking.property.name}
             </h1>
 
             <div>
               {/* Adjusted line */}
-              <img src={hline} alt="" className="md:mt-4 sm:mt-2" />
+              <img src={hline} alt="" className="md:mt-4 mt-2" />
               <div className="grid grid-cols-3 mt-3">
                 <div className="flex md:w-[60%]">
                   <div className="flex-col flex">
                     <img
                       src={icon1}
                       alt=""
-                      className="md:w-8 md:h-8 sm:w-6 sm:h-6"
+                      className="md:w-8 md:h-8 sm:w-6 sm:h-6 w-5 h-5"
                     />
-                    <p className="md:text-[9px] sm:text-[7px] text-white mt-2">
+                    <p className="md:text-[9px] text-[7px] text-white mt-2">
                       Check In Date
                     </p>
-                    <p className="md:text-xs sm:text-[8px] text-[#FFC4BB] md:mt-1">
+                    <p className="md:text-xs text-[8px] text-[#FFC4BB] md:mt-1">
                       {formattedDateCheckIn}
                     </p>
                   </div>
@@ -145,21 +145,21 @@ const LaunchScreen = ({ onNavigate, nftData, setTokenID, tokenID}) => {
                   <img
                     src={vline}
                     alt=""
-                    className="w-[1.5px] md:h-[73px] sm:h-[50px] ml-7 md:mt-1"
+                    className="w-[1.5px] md:h-[73px] h-[50px] ml-2 sm:ml-5 md:mt-1"
                   />
                 </div>
 
-                <div className="flex md:ml-[-35px] sm:ml-[-12px]">
+                <div className="flex md:ml-[-35px] sm:ml-[-12px] ml-[-8px]">
                   <div className="flex-col flex">
                     <img
                       src={icon2}
                       alt=""
-                      className="md:w-8 md:h-8 sm:w-6 sm:h-6"
+                      className="md:w-8 md:h-8 sm:w-6 sm:h-6 w-5 h-5"
                     />
-                    <p className="md:text-[9px] sm:text-[7px] text-white mt-2">
+                    <p className="md:text-[9px] text-[7px] text-white mt-2">
                       Check Out
                     </p>
-                    <p className="md:text-xs sm:text-[8px] text-[#FFC4BB] md:mt-1">
+                    <p className="md:text-xs text-[8px] text-[#FFC4BB] md:mt-1">
                       {formattedDateCheckOut}
                     </p>
                   </div>
@@ -167,37 +167,43 @@ const LaunchScreen = ({ onNavigate, nftData, setTokenID, tokenID}) => {
                   <img
                     src={vline}
                     alt=""
-                    className="w-[1.5px] md:h-[73px] sm:h-[50px] ml-5 md:mt-1"
+                    className="w-[1.5px] md:h-[73px] sm:h-[50px] ml-3 h-[50px] sm:ml-4 md:mt-1"
                   />
                 </div>
 
-                <div className="flex md:ml-[-50px] sm:ml-[-10px]">
+                <div className="flex md:ml-[-50px] sm:ml-[-10px] ml-[3px]">
                   <div className="flex-col flex">
                     <img
                       src={icon3}
                       alt=""
-                      className="md:w-8 md:h-8 sm:w-6 sm:h-6"
+                      className="md:w-8 md:h-8 sm:w-6 sm:h-6 w-5 h-5"
                     />
-                    <p className="md:text-[9px] sm:text-[7px] text-white mt-2">
+                    <p className="md:text-[9px] text-[7px] text-white mt-2">
                       Location
                     </p>
-                    <p className="md:text-xs sm:text-[8px] text-[#FFC4BB] md:mt-1">
+                    <p className="md:text-xs text-[8px] text-[#FFC4BB] md:mt-1">
                       {bookingData.data.booking.property.address.address},{" "}
                       {bookingData.data.booking.property.address.city},{" "}
                       {bookingData.data.booking.property.address.country}
                     </p>
+                    
                   </div>
                 </div>
               </div>
             </div>
 
             {/* Button */}
-            <div className="flex justify-center items-center gap-4 md:mt-6 sm:mt-2">
-              <a href={`https://polygon.dassets.xyz/hotels/nft-details?nftId=${tokenID}`} target="_blank" rel="noopener noreferrer" className="text-white bg-[#331D19] border border-[#7B3F26] md:px-9 md:py-2 sm:text-xs sm:px-4 sm:py-1 md:text-[16px] rounded-lg ">
+            <div className="flex justify-center items-center gap-4 md:mt-6 sm:mt-2 mt-1">
+              <a
+                href={`https://polygon.dassets.xyz/hotels/nft-details?nftId=${tokenID}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white bg-[#331D19] border border-[#7B3F26] md:px-9 md:py-2 sm:text-xs text-[10px] px-4 py-1 md:text-[16px] rounded-lg "
+              >
                 Hotel Details
               </a>
               <button
-                className="text-white bg-[#CA3F2A] border border-[#FFE3E3] md:px-9 md:py-2 sm:text-xs sm:px-4 sm:py-1 md:text-[16px] rounded-lg border-opacity-50"
+                className="text-white bg-[#CA3F2A] border border-[#FFE3E3] md:px-9 md:py-2 sm:text-xs text-[10px] px-4 py-1 md:text-[16px] rounded-lg border-opacity-50"
                 onClick={() => onNavigate("stepone", bookingData)}
               >
                 Buy Booking
