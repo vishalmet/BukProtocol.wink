@@ -76,9 +76,9 @@ const LaunchScreen = ({ onNavigate, nftData, setTokenID, tokenID}) => {
 
   return (
     <div className="flex justify-center items-center h-screen bg-black">
-      <div className="relative md:w-[500px] md:h-[500px] sm:h-[350px] sm:w-[350px] bg-[#161616] w-full shadow-lg p-2 flex flex-col items-center">
+      <div className="relative md:w-[500px] md:h-[500px] sm:h-[350px] sm:w-[300px] bg-[#161616] w-full shadow-lg p-2 flex flex-col items-center">
         <div
-          className="relative shadow-lg md:w-[485px] md:h-[230px] sm:h-[160px] sm:w-[335px] w-full h-[120px] sm:p-6 p-3 flex flex-col justify-between"
+          className="relative shadow-lg md:w-[485px] md:h-[230px] sm:h-[160px] sm:w-[300px] w-full h-[110px] sm:p-6 p-3 flex flex-col justify-between"
           style={{
             backgroundImage: `url(${roomImage})`, // Use the roomImage state
             backgroundSize: "cover",
@@ -113,13 +113,13 @@ const LaunchScreen = ({ onNavigate, nftData, setTokenID, tokenID}) => {
           </div>
 
           {/* Content */}
-          <div className="md:mt-5 sm:mt-3 mt-2">
+          <div className="md:mt-5 sm:mt-3 mt-1">
             <ul className="list-disc list-inside text-[#FFC4BB] md:text-xs text-[9px]">
               <li>
                 <span className="ml-[-6px]">{bookingData.data.bedType}</span>
               </li>
             </ul>
-            <h1 className="text-white md:text-lg sm:text-sm text-xs mt-1">
+            <h1 className="text-white md:text-lg sm:text-sm text-xs sm:mt-1">
               {bookingData.data.booking.property.name}
             </h1>
 
